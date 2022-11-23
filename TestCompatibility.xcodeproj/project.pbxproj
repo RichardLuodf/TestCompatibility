@@ -15,6 +15,7 @@
 		F4396144292E1FCF0047EBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4396143292E1FCF0047EBBA /* Assets.xcassets */; };
 		F4396147292E1FCF0047EBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4396145292E1FCF0047EBBA /* LaunchScreen.storyboard */; };
 		F439614F292E22740047EBBA /* DB in Resources */ = {isa = PBXBuildFile; fileRef = F439614E292E22740047EBBA /* DB */; };
+		F475FCFB292E5F6500F90530 /* SplunkOtel in Frameworks */ = {isa = PBXBuildFile; productRef = F475FCFA292E5F6500F90530 /* SplunkOtel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				679E883E1B663B1F8B79BB14 /* Pods_TestCompatibility.framework in Frameworks */,
+				F475FCFB292E5F6500F90530 /* SplunkOtel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +114,9 @@
 			dependencies = (
 			);
 			name = TestCompatibility;
+			packageProductDependencies = (
+				F475FCFA292E5F6500F90530 /* SplunkOtel */,
+			);
 			productName = TestCompatibility;
 			productReference = F4396137292E1FCF0047EBBA /* TestCompatibility.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +145,9 @@
 				Base,
 			);
 			mainGroup = F439612E292E1FCF0047EBBA;
+			packageReferences = (
+				F475FCF9292E5F6500F90530 /* XCRemoteSwiftPackageReference "splunk-otel-ios" */,
+			);
 			productRefGroup = F4396138292E1FCF0047EBBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F475FCF9292E5F6500F90530 /* XCRemoteSwiftPackageReference "splunk-otel-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/signalfx/splunk-otel-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F475FCFA292E5F6500F90530 /* SplunkOtel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F475FCF9292E5F6500F90530 /* XCRemoteSwiftPackageReference "splunk-otel-ios" */;
+			productName = SplunkOtel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F439612F292E1FCF0047EBBA /* Project object */;
 }
